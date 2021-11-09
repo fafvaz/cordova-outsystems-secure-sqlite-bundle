@@ -2,7 +2,7 @@ var userAgent = navigator.userAgent.toLowerCase();
 var Android = userAgent.indexOf("android") > -1;
 
 if(Android) {
-// Force dependency load
+    // Force dependency load
 var SQLiteCipher = require('cordova-sqlcipher-adapter.SQLitePlugin');
 var SecureStorage = require('cordova-plugin-secure-storage.SecureStorage');
 
@@ -34,7 +34,6 @@ var dbName = "";
  */
 
 function removeKeys(successCallback, errorCallback) {
-    // If the key is cached, use it
   var initFn = function() {
     var ss = new SecureStorage(
     function () { console.log('Database OK')},
